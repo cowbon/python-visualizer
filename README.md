@@ -18,6 +18,8 @@ Usage:
 Plots the Fast Fourier Transform data for a **mono** WAV file into image files, then uses ffmpeg to mix the audio with
 the images.
 
+You can execute `importer.py` to convert a stereo WAV file to mono.
+
 It will output thousands of PNG images into the folder from which it is run, so make sure you're not running low on disk
 space before setting it going. The output video file will have the same name as the WAV file, with an mp4 extension.
 
