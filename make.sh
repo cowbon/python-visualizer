@@ -9,4 +9,5 @@ fi
 
 ./plotvals.py $1
 
-ffmpeg -i frame_*.png -i $1 out.mp4
+rm -f out.mp4
+ffmpeg -i frame_%*.png -i $1 out.mp4
