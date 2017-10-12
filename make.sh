@@ -9,4 +9,4 @@ fi
 
 ./plotvals.py $1
 
-ffmpeg -i frame_%05.png -i $1 ${WAVFILE/wav/mp4}
+ffmpeg -i frame_*.png -i $1 out.mp4
