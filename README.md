@@ -1,7 +1,19 @@
-python-visualiser
-=================
+# python-visualiser
 
-Usage: ./make.sh FILENAME
+## Setup
+
+This package depends on NumPy and Matplotlib.
+```shell
+sudo apt-get install python-numpy
+sudo apt-get install python-matplotlib
+```
+
+## Run
+
+Usage:
+```shell
+./make.sh FILENAME
+```
 
 Plots the Fast Fourier Transform data for a **mono** WAV file into image files, then uses ffmpeg to mix the audio with
 the images.
@@ -11,4 +23,4 @@ space before setting it going. The output video file will have the same name as 
 
 It's also worth noting that this is in no way a real-time application. On my machine, it processes 1 second of audio around
 every 4 seconds, but YMMV. It was written as a proof of concept for an audio visualisation project for which I ended up using
-an IC connected to an Arduino rather than this. For information on the electronic project, please visit [my article about it](http://n00bsys0p.co.uk/blog/2012/07/09/arduinomsgeq7-audio-spectrum-led-display).
+an IC connected to an Arduino rather than this.
