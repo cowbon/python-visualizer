@@ -10,4 +10,4 @@ fi
 ./plotvals.py $1
 
 rm -f out.mp4
-ffmpeg -i frame_%*.png -i $1 out.mp4
+ffmpeg -framerate 24 -i frame_%*.png -i $1 out.mp4
