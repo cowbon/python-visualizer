@@ -108,8 +108,8 @@ if __name__ == '__main__':
 		average_fft_bands(fft_data)
 		y_axis = fft_averages
 		"""Stuff for bar graph"""
-		width = 0.35
-		p1 = plt.bar(x_axis, y_axis, width, color='r')
+		width = 0.95
+		p1 = plt.bar(x_axis, y_axis, width, alpha=0.4, color='r', edgecolor='none')
 		"""End bar graph stuff"""
 		filename = str('frame_%05d' % offset) + '.png'
 		plt.savefig(filename, dpi=100)
