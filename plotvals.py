@@ -9,7 +9,10 @@ matplotlib.use('Agg')
 from matplotlib import pylab
 import matplotlib.pyplot as plt
 
+
+# Mono or binaural
 filename = sys.argv[1]
+channel = int(sys.argv[2]) if sys.argv[2] else 1
 
 if __name__ == '__main__':
 	# Open the wave file and get info
@@ -27,7 +30,7 @@ if __name__ == '__main__':
 	wave_file.close()
 
 	# Unpack the binary data into an array
-	unpack_fmt = '%dh' % (data_size)
+	unpack_fmt = '%dh' % (data_size * channel)
 	sound_data = struct.unpack(unpack_fmt, sound_data)
 
 	# Process many samples

@@ -7,7 +7,7 @@ fi
 
 [[ -w frame_*.png ]] && rm frame_*.png
 
-./plotvals.py $1
+./plotvals.py $1 2
 
 rm -f out.mp4
 ffmpeg -framerate 24 -i frame_%*.png -i $1 out.mp4
